@@ -1,0 +1,28 @@
+[task]
+name = "afterquery/c-python7-compiler"
+description = "Build a C-subset to x86-64 assembly compiler in Python, checked by running the programs it produces."
+
+[metadata]
+paradigm = "implementation"
+compute = "cpu"
+languages = ["python"]
+category = "compilers"
+difficulty = "frontier"
+tags = ["compiler", "x86-64", "c", "codegen"]
+oracle_reward_threshold = 0.95
+
+[agent]
+timeout_sec = 7200
+user = "agent"
+
+[verifier]
+timeout_sec = 3600
+
+[environment]
+allow_internet = false
+cpus = 4
+memory_mb = 16384
+gpus = 0
+
+[environment.env]
+TASK_BUDGET_SECS = "7200"
